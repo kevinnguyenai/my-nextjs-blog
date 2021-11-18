@@ -4,7 +4,7 @@ import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link'
 import Date from '../components/date'
-
+import IndexPage from '../components/IndexPage';
 // Dynamic data for page use server-side renderer (per request)
 /*
 export async function getServerSideProps(context) {
@@ -29,9 +29,7 @@ export async function getStaticProps() {
 export default function Home({allPostsData}) {
   return (
     <Layout home>
-      <Head>
-        <title>{siteTitle}</title>
-      </Head>
+      <IndexPage siteTitle={siteTitle}/>
       <section className={utilStyles.headingMd}>
         <p>Hi I'm Kevin, I'm a Software Engineer, I'm an enthusiastic person,
           I like computer science, blockchain and game and especsially NFT gaming,
